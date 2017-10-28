@@ -7,15 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A037E1AE1FA4DA3A002D770B /* EventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A037E1AC1FA4DA3A002D770B /* EventTableViewCell.m */; };
+		A037E1AF1FA4DA3A002D770B /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A037E1AD1FA4DA3A002D770B /* EventTableViewCell.xib */; };
+		A037E1B41FA51E39002D770B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A037E1B31FA51E39002D770B /* FirstViewController.m */; };
+		A037E1B71FA531DE002D770B /* NSString+HTMLConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = A037E1B61FA531DE002D770B /* NSString+HTMLConversion.m */; };
+		A0A51A481FA4C28A00A7070B /* EventCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A51A471FA4C28A00A7070B /* EventCommunicator.m */; };
+		A0A51A4B1FA4C56A00A7070B /* EventsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A51A4A1FA4C56A00A7070B /* EventsBuilder.m */; };
+		A0A51A511FA4C98000A7070B /* EventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A51A501FA4C98000A7070B /* EventManager.m */; };
 		A0BE99241FA4B7080024B166 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BE99231FA4B7080024B166 /* AppDelegate.m */; };
 		A0BE99271FA4B7080024B166 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BE99261FA4B7080024B166 /* ViewController.m */; };
 		A0BE992A1FA4B7080024B166 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0BE99281FA4B7080024B166 /* Main.storyboard */; };
 		A0BE992C1FA4B7080024B166 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0BE992B1FA4B7080024B166 /* Assets.xcassets */; };
 		A0BE992F1FA4B7080024B166 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0BE992D1FA4B7080024B166 /* LaunchScreen.storyboard */; };
 		A0BE99321FA4B7080024B166 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BE99311FA4B7080024B166 /* main.m */; };
+		A0BE993F1FA4B9DD0024B166 /* EventModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BE993E1FA4B9DD0024B166 /* EventModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A037E1AB1FA4DA3A002D770B /* EventTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventTableViewCell.h; sourceTree = "<group>"; };
+		A037E1AC1FA4DA3A002D770B /* EventTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventTableViewCell.m; sourceTree = "<group>"; };
+		A037E1AD1FA4DA3A002D770B /* EventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
+		A037E1B21FA51E39002D770B /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		A037E1B31FA51E39002D770B /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		A037E1B51FA531DE002D770B /* NSString+HTMLConversion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+HTMLConversion.h"; sourceTree = "<group>"; };
+		A037E1B61FA531DE002D770B /* NSString+HTMLConversion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTMLConversion.m"; sourceTree = "<group>"; };
+		A0A51A461FA4C28A00A7070B /* EventCommunicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventCommunicator.h; sourceTree = "<group>"; };
+		A0A51A471FA4C28A00A7070B /* EventCommunicator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventCommunicator.m; sourceTree = "<group>"; };
+		A0A51A491FA4C56A00A7070B /* EventsBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventsBuilder.h; sourceTree = "<group>"; };
+		A0A51A4A1FA4C56A00A7070B /* EventsBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventsBuilder.m; sourceTree = "<group>"; };
+		A0A51A4C1FA4C8F100A7070B /* EventManagerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventManagerDelegate.h; sourceTree = "<group>"; };
+		A0A51A4F1FA4C98000A7070B /* EventManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventManager.h; sourceTree = "<group>"; };
+		A0A51A501FA4C98000A7070B /* EventManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventManager.m; sourceTree = "<group>"; };
 		A0BE991F1FA4B7080024B166 /* EventMeetups.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventMeetups.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0BE99221FA4B7080024B166 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A0BE99231FA4B7080024B166 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +48,10 @@
 		A0BE992E1FA4B7080024B166 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0BE99301FA4B7080024B166 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0BE99311FA4B7080024B166 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A0BE993D1FA4B9DD0024B166 /* EventModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventModel.h; sourceTree = "<group>"; };
+		A0BE993E1FA4B9DD0024B166 /* EventModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventModel.m; sourceTree = "<group>"; };
+		A0BE99411FA4BA970024B166 /* ConstantHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConstantHeaders.h; sourceTree = "<group>"; };
+		A0BE99481FA4C13D0024B166 /* EventCommunicatorDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventCommunicatorDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +65,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A037E1AA1FA4DA16002D770B /* EventTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A037E1AB1FA4DA3A002D770B /* EventTableViewCell.h */,
+				A037E1AC1FA4DA3A002D770B /* EventTableViewCell.m */,
+				A037E1AD1FA4DA3A002D770B /* EventTableViewCell.xib */,
+			);
+			path = EventTableViewCell;
+			sourceTree = "<group>";
+		};
+		A037E1B01FA4DA43002D770B /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A0BE99251FA4B7080024B166 /* ViewController.h */,
+				A0BE99261FA4B7080024B166 /* ViewController.m */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		A037E1B11FA51E18002D770B /* FirstViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A037E1B21FA51E39002D770B /* FirstViewController.h */,
+				A037E1B31FA51E39002D770B /* FirstViewController.m */,
+			);
+			path = FirstViewController;
+			sourceTree = "<group>";
+		};
 		A0BE99161FA4B7080024B166 = {
 			isa = PBXGroup;
 			children = (
@@ -58,17 +112,79 @@
 		A0BE99211FA4B7080024B166 /* EventMeetups */ = {
 			isa = PBXGroup;
 			children = (
-				A0BE99221FA4B7080024B166 /* AppDelegate.h */,
-				A0BE99231FA4B7080024B166 /* AppDelegate.m */,
-				A0BE99251FA4B7080024B166 /* ViewController.h */,
-				A0BE99261FA4B7080024B166 /* ViewController.m */,
-				A0BE99281FA4B7080024B166 /* Main.storyboard */,
+				A0BE99401FA4BA7A0024B166 /* Utilities */,
+				A0BE993C1FA4B7D70024B166 /* DataModel */,
+				A0BE993B1FA4B7A70024B166 /* AppDelegate */,
+				A0BE993A1FA4B7800024B166 /* ViewControllers */,
+				A0BE99391FA4B7720024B166 /* Storyboard */,
+				A0BE99381FA4B7460024B166 /* Network Layer */,
 				A0BE992B1FA4B7080024B166 /* Assets.xcassets */,
-				A0BE992D1FA4B7080024B166 /* LaunchScreen.storyboard */,
 				A0BE99301FA4B7080024B166 /* Info.plist */,
 				A0BE99311FA4B7080024B166 /* main.m */,
 			);
 			path = EventMeetups;
+			sourceTree = "<group>";
+		};
+		A0BE99381FA4B7460024B166 /* Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+				A0A51A4C1FA4C8F100A7070B /* EventManagerDelegate.h */,
+				A0A51A4F1FA4C98000A7070B /* EventManager.h */,
+				A0A51A501FA4C98000A7070B /* EventManager.m */,
+				A0BE99481FA4C13D0024B166 /* EventCommunicatorDelegate.h */,
+				A0A51A461FA4C28A00A7070B /* EventCommunicator.h */,
+				A0A51A471FA4C28A00A7070B /* EventCommunicator.m */,
+			);
+			path = "Network Layer";
+			sourceTree = "<group>";
+		};
+		A0BE99391FA4B7720024B166 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				A0BE99281FA4B7080024B166 /* Main.storyboard */,
+				A0BE992D1FA4B7080024B166 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		A0BE993A1FA4B7800024B166 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A037E1B11FA51E18002D770B /* FirstViewController */,
+				A037E1B01FA4DA43002D770B /* MainViewController */,
+				A037E1AA1FA4DA16002D770B /* EventTableViewCell */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A0BE993B1FA4B7A70024B166 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				A0BE99221FA4B7080024B166 /* AppDelegate.h */,
+				A0BE99231FA4B7080024B166 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		A0BE993C1FA4B7D70024B166 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				A0BE993D1FA4B9DD0024B166 /* EventModel.h */,
+				A0BE993E1FA4B9DD0024B166 /* EventModel.m */,
+				A0A51A491FA4C56A00A7070B /* EventsBuilder.h */,
+				A0A51A4A1FA4C56A00A7070B /* EventsBuilder.m */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		A0BE99401FA4BA7A0024B166 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A0BE99411FA4BA970024B166 /* ConstantHeaders.h */,
+				A037E1B51FA531DE002D770B /* NSString+HTMLConversion.h */,
+				A037E1B61FA531DE002D770B /* NSString+HTMLConversion.m */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A037E1AF1FA4DA3A002D770B /* EventTableViewCell.xib in Resources */,
 				A0BE992F1FA4B7080024B166 /* LaunchScreen.storyboard in Resources */,
 				A0BE992C1FA4B7080024B166 /* Assets.xcassets in Resources */,
 				A0BE992A1FA4B7080024B166 /* Main.storyboard in Resources */,
@@ -143,7 +260,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0BE99271FA4B7080024B166 /* ViewController.m in Sources */,
+				A037E1B41FA51E39002D770B /* FirstViewController.m in Sources */,
+				A0A51A481FA4C28A00A7070B /* EventCommunicator.m in Sources */,
 				A0BE99321FA4B7080024B166 /* main.m in Sources */,
+				A0BE993F1FA4B9DD0024B166 /* EventModel.m in Sources */,
+				A037E1AE1FA4DA3A002D770B /* EventTableViewCell.m in Sources */,
+				A037E1B71FA531DE002D770B /* NSString+HTMLConversion.m in Sources */,
+				A0A51A4B1FA4C56A00A7070B /* EventsBuilder.m in Sources */,
+				A0A51A511FA4C98000A7070B /* EventManager.m in Sources */,
 				A0BE99241FA4B7080024B166 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,11 +402,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7WNV66482Y;
 				INFOPLIST_FILE = EventMeetups/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bharatmahajan.EventMeetups;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bharatmahajan.eventmeetups;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -291,11 +419,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7WNV66482Y;
 				INFOPLIST_FILE = EventMeetups/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bharatmahajan.EventMeetups;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bharatmahajan.eventmeetups;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
