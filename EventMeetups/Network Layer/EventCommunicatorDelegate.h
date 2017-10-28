@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @protocol EventCommunicatorDelegate <NSObject>
+
 -(void)receiveEventJSON:(NSData*)dataReceivedObj;
 -(void)fetchEventJSONFailedwithError:(NSError*)error;
 @end

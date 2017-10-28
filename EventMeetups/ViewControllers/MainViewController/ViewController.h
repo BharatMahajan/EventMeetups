@@ -12,6 +12,7 @@
 #import "EventCommunicator.h"
 #import "EventTableViewCell.h"
 #import "NSString+HTMLConversion.h"
+#import "AlertMessage.h"
 
 @interface ViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>{
     NSMutableArray *arrEventsReceived;

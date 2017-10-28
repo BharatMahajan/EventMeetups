@@ -16,5 +16,7 @@
 @property (weak,nonatomic) id delegate;
 
 -(void) fetchEventData;
-- (void)downloadImageWithURL:(NSURL *)url completionBlock:(void (^)(BOOL succeeded, NSData *data))completionBlock;
+- (void)downloadImageWithURL:(NSURL *)url
+             completionBlock:(void (^)
+                              (BOOL succeeded, NSData *data))completionBlock;
 @end

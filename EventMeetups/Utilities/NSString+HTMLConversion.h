@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface NSString (HTMLConversion)
+
 +(NSString *)convertHTML:(NSString *)html;
 @end

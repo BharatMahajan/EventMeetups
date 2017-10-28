@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @protocol EventManagerDelegate <NSObject>
+
 -(void)didReceiveEvents:(NSArray*)arrEvents;
 -(void)fetchReceiveEventsFailedwithError:(NSError*)error;
 

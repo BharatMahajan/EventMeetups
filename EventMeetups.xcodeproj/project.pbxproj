@@ -11,6 +11,7 @@
 		A037E1AF1FA4DA3A002D770B /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A037E1AD1FA4DA3A002D770B /* EventTableViewCell.xib */; };
 		A037E1B41FA51E39002D770B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A037E1B31FA51E39002D770B /* FirstViewController.m */; };
 		A037E1B71FA531DE002D770B /* NSString+HTMLConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = A037E1B61FA531DE002D770B /* NSString+HTMLConversion.m */; };
+		A037E1BA1FA53DE7002D770B /* AlertMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = A037E1B91FA53DE7002D770B /* AlertMessage.m */; };
 		A0A51A481FA4C28A00A7070B /* EventCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A51A471FA4C28A00A7070B /* EventCommunicator.m */; };
 		A0A51A4B1FA4C56A00A7070B /* EventsBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A51A4A1FA4C56A00A7070B /* EventsBuilder.m */; };
 		A0A51A511FA4C98000A7070B /* EventManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A51A501FA4C98000A7070B /* EventManager.m */; };
@@ -31,6 +32,8 @@
 		A037E1B31FA51E39002D770B /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		A037E1B51FA531DE002D770B /* NSString+HTMLConversion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+HTMLConversion.h"; sourceTree = "<group>"; };
 		A037E1B61FA531DE002D770B /* NSString+HTMLConversion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTMLConversion.m"; sourceTree = "<group>"; };
+		A037E1B81FA53DE7002D770B /* AlertMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertMessage.h; sourceTree = "<group>"; };
+		A037E1B91FA53DE7002D770B /* AlertMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertMessage.m; sourceTree = "<group>"; };
 		A0A51A461FA4C28A00A7070B /* EventCommunicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventCommunicator.h; sourceTree = "<group>"; };
 		A0A51A471FA4C28A00A7070B /* EventCommunicator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventCommunicator.m; sourceTree = "<group>"; };
 		A0A51A491FA4C56A00A7070B /* EventsBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventsBuilder.h; sourceTree = "<group>"; };
@@ -183,6 +186,8 @@
 				A0BE99411FA4BA970024B166 /* ConstantHeaders.h */,
 				A037E1B51FA531DE002D770B /* NSString+HTMLConversion.h */,
 				A037E1B61FA531DE002D770B /* NSString+HTMLConversion.m */,
+				A037E1B81FA53DE7002D770B /* AlertMessage.h */,
+				A037E1B91FA53DE7002D770B /* AlertMessage.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 				A0A51A481FA4C28A00A7070B /* EventCommunicator.m in Sources */,
 				A0BE99321FA4B7080024B166 /* main.m in Sources */,
 				A0BE993F1FA4B9DD0024B166 /* EventModel.m in Sources */,
+				A037E1BA1FA53DE7002D770B /* AlertMessage.m in Sources */,
 				A037E1AE1FA4DA3A002D770B /* EventTableViewCell.m in Sources */,
 				A037E1B71FA531DE002D770B /* NSString+HTMLConversion.m in Sources */,
 				A0A51A4B1FA4C56A00A7070B /* EventsBuilder.m in Sources */,

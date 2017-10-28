@@ -16,12 +16,19 @@
     [self.communicator fetchEventData];
 }
 
-- (void)downloadImageWithURL:(NSURL *)url completionBlock:(void (^)(BOOL succeeded, NSData *data))completionBlock{
-    [self.communicator downloadImageWithURL:url completionBlock:^(BOOL succeeded, NSData *data) {
-        if (succeeded) {
+- (void)downloadImageWithURL:(NSURL *)url
+             completionBlock:(void (^)
+                              (BOOL succeeded, NSData *data))completionBlock
+{
+    [self.communicator downloadImageWithURL:url
+                            completionBlock:^(BOOL succeeded, NSData *data)
+    {
+        if (succeeded)
+        {
             completionBlock(succeeded,data);
         }
-        else{
+        else
+        {
             completionBlock(succeeded,nil);
         }
     }];
@@ -29,18 +36,23 @@
 
 #pragma mark - EventCommunicatorDelegate
 
--(void)receiveEventJSON:(NSData*)dataReceivedObj{
+-(void)receiveEventJSON:(NSData*)dataReceivedObj
+{
     NSError *error = nil;
     NSArray *arrEvents = [EventsBuilder eventsFromJSON:dataReceivedObj error:error];
     
-    if (error!=nil) {
+    if (error!=nil)
+    {
         [self.delegate fetchReceiveEventsFailedwithError:error];
     }
-    else{
+    else
+    {
         [self.delegate didReceiveEvents:arrEvents];
     }
 }
--(void)fetchEventJSONFailedwithError:(NSError*)error{
+
+-(void)fetchEventJSONFailedwithError:(NSError*)error
+{
     [self.delegate fetchReceiveEventsFailedwithError:error];
 }
 

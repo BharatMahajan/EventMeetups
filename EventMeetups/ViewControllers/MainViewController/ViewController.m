@@ -16,7 +16,8 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     eventManager = [[EventManager alloc] init];
@@ -30,11 +31,14 @@
     refreshControl = [[UIRefreshControl alloc] init];
     refreshControl.backgroundColor = [UIColor clearColor];
     refreshControl.tintColor = [UIColor blueColor];
-    [refreshControl addTarget:self action:@selector(refreshTableViewData:) forControlEvents:UIControlEventValueChanged];
+    [refreshControl addTarget:self
+                       action:@selector(refreshTableViewData:)
+             forControlEvents:UIControlEventValueChanged];
     [self.tblEvents addSubview:refreshControl];
 }
 
--(void)viewWillAppear:(BOOL)animated{
+-(void)viewWillAppear:(BOOL)animated
+{
     [super viewWillAppear:YES];
     [self.activityIndicator startAnimating];
     [eventManager fetchEventsData];
@@ -47,29 +51,39 @@
 }
 
 #pragma mark - Tableview Methods
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
     return 1;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if ([arrSelectedMoreIndex containsObject:[NSNumber numberWithInteger:indexPath.row]]) {
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([arrSelectedMoreIndex containsObject:[NSNumber numberWithInteger:indexPath.row]])
+    {
         EventModel *event = arrEventsReceived[indexPath.row];
+        NSAttributedString *attributedText = [[NSAttributedString alloc]
+                                              initWithString:[NSString convertHTML:event.description]
+                                              attributes:@{NSFontAttributeName: [UIFont fontWithName:kFontUsed size:18]}];
+
+        CGRect rect = [attributedText
+                       boundingRectWithSize:(CGSize){self.view.frame.size.width-60,CGFLOAT_MAX}
+                       options:NSStringDrawingUsesLineFragmentOrigin context:nil];
         
-        NSAttributedString *attributedText = [[NSAttributedString alloc] initWithString:[NSString convertHTML:event.description] attributes:@{NSFontAttributeName: [UIFont fontWithName:kFontUsed size:18]}];
-        
-        CGRect rect = [attributedText boundingRectWithSize:(CGSize){self.view.frame.size.width-60,CGFLOAT_MAX}options:NSStringDrawingUsesLineFragmentOrigin context:nil];
-        if (rect.size.height > 21) {
+        if (rect.size.height > 21)
+        {
             return rect.size.height + (360-21);
         }
     }
     return 360;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
     return arrEventsReceived.count;
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     NSString *simpleTableIdentifier = kEventTableViewCell;
     EventTableViewCell *cell = (EventTableViewCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
@@ -93,12 +107,16 @@
     
     [cell.activityIndicator startAnimating];
     
-    if (event.imageData.length>0) {
+    if (event.imageData.length>0)
+    {
         [cell.activityIndicator stopAnimating];
         cell.imgEvent.image = [UIImage imageWithData:event.imageData];
-    } else {
-        // download the image asynchronously
-        [eventManager downloadImageWithURL:[NSURL URLWithString:event.group_photo[kResponseParameterPhotolink]] completionBlock:^(BOOL succeeded, NSData *data) {
+    }
+    else
+    {
+        [eventManager downloadImageWithURL:[NSURL URLWithString:
+                                            event.group_photo[kResponseParameterPhotolink]]
+                           completionBlock:^(BOOL succeeded, NSData *data) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 [cell.activityIndicator stopAnimating];
             });
@@ -112,49 +130,69 @@
     cell.lblDescription.text = [NSString convertHTML:event.description];
     
     cell.btnMore.tag = indexPath.row;
-    [cell.btnMore addTarget:self action:@selector(moreButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
-    if ([arrSelectedMoreIndex containsObject:[NSNumber numberWithInteger:indexPath.row]]) {
+    [cell.btnMore addTarget:self
+                     action:@selector(moreButtonClicked:)
+           forControlEvents:UIControlEventTouchUpInside];
+    
+    if ([arrSelectedMoreIndex containsObject:[NSNumber numberWithInteger:indexPath.row]])
+    {
         [cell.lblButtonName setText:kEventViewButtonLess];
         cell.lblDescription.numberOfLines = 0;
     }
-    else{
+    else
+    {
         [cell.lblButtonName setText:kEventViewButtonMore];
         cell.lblDescription.numberOfLines = 1;
     }
     return cell;
 }
 
-
--(IBAction)moreButtonClicked:(UIButton*)sender{
-    if ([arrSelectedMoreIndex containsObject:[NSNumber numberWithInteger:sender.tag]]) {
+-(IBAction)moreButtonClicked:(UIButton*)sender
+{
+    if ([arrSelectedMoreIndex containsObject:[NSNumber numberWithInteger:sender.tag]])
+    {
         [arrSelectedMoreIndex removeObject:[NSNumber numberWithInteger:sender.tag]];
     }
     else{
         [arrSelectedMoreIndex addObject:[NSNumber numberWithInteger:sender.tag]];
     }
+    
     [self.tblEvents reloadData];
-    [self.tblEvents scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:sender.tag inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:NO];
+    [self.tblEvents scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:sender.tag inSection:0]
+                          atScrollPosition:UITableViewScrollPositionBottom animated:NO];
 }
 
 #pragma mark - EventManagerDelegate
 
--(void)didReceiveEvents:(NSArray*)arrEvents{
+-(void)didReceiveEvents:(NSArray*)arrEvents
+{
     arrEventsReceived = [NSMutableArray arrayWithArray:arrEvents];
     
-    if (arrEvents.count == 0 || arrEvents == nil || arrEvents == NULL) {
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:kResponseFailureMessage message:nil preferredStyle:UIAlertControllerStyleAlert];
-        [alertController addAction:[UIAlertAction actionWithTitle:kOkTextButton style:UIAlertActionStyleDefault handler:nil]];
-        [self presentViewController:alertController animated:YES completion:nil];
+    if (arrEvents.count == 0 || arrEvents == nil || arrEvents == NULL)
+    {
+        [AlertMessage showSimpleAlertIn:self
+                              WithTitle:kResponseFailureMessage
+                                message:nil
+                      cancelButtonTitle:kOkTextButton];
+        if (refreshControl.isRefreshing)
+        {
+            [refreshControl endRefreshing];
+        }
     }
     else
         [self.tblEvents reloadData];
-    dispatch_async(dispatch_get_main_queue(), ^{
+    dispatch_async(dispatch_get_main_queue(), ^
+    {
         [self.activityIndicator stopAnimating];
     });
 }
 
--(void)fetchReceiveEventsFailedwithError:(NSError*)error{
-    EVENTSLog(@"Error %@ : %@",error,[error localizedDescription]);
+-(void)fetchReceiveEventsFailedwithError:(NSError*)error
+{
+    [AlertMessage showSimpleAlertIn:self
+                          WithTitle:[error localizedDescription]
+                            message:nil
+                  cancelButtonTitle:kOkTextButton];
 }
 
 

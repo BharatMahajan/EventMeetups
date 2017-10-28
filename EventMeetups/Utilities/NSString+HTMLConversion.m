@@ -10,13 +10,16 @@
 
 @implementation NSString (HTMLConversion)
 
-+(NSString *)convertHTML:(NSString *)html {
++(NSString *)convertHTML:(NSString *)html
+{
     NSScanner *myScanner;
     NSString *text = nil;
     myScanner = [NSScanner scannerWithString:html];
     
-    @autoreleasepool{
-        while ([myScanner isAtEnd] == NO) {
+    @autoreleasepool
+    {
+        while ([myScanner isAtEnd] == NO)
+        {
             [myScanner scanUpToString:@"<" intoString:NULL] ;
             [myScanner scanUpToString:@">" intoString:&text] ;
             html = [html stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%@>", text] withString:@""];

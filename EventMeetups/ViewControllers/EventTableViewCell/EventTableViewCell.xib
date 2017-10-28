@@ -30,7 +30,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bq2-6x-cx9" userLabel="TopView">
                                 <rect key="frame" x="10" y="5" width="390" height="150"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zxp-2M-n5g">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="event" translatesAutoresizingMaskIntoConstraints="NO" id="Zxp-2M-n5g">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="150"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </imageView>
@@ -192,6 +192,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="event" width="600" height="151"/>
         <image name="location" width="512" height="512"/>
     </resources>
 </document>
